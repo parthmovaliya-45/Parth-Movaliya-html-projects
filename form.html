@@ -1,33 +1,23 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>Fetch Weather Details</title>
+  <title>A simple form</title>
 </head>
-
 <body>
-  <div id="weather-container">
-    <h1>Weather Details</h1>
-    <p id="weather-data"></p>
-  </div>
-  <script>
-    const fetchWeatherData = () => {
-      const apiKey = 'Your API Key';
-      const city = 'Your City';
-      const apiUrl = https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey};
-      fetch(apiUrl).then((response) => response.json()).then((data) => {
-        console.log(data);
-        const {
-          main,
-          name
-        } = data;
-        const weatherData = It is currently ${main.temp} degrees in ${name};
-        document.getElementById('weather-data').textContent = weatherData;
-      });
-    };
-    fetchWeatherData();
-  </script>
-</body>
+  <form>
+    <!-- Code example of some standard fields in form -->
+    <input type="text" name="firstName" placeholder="First name">
+    
+    <input type="text" name="lastName" placeholder="Last name">
+    
+    <input type="text" name="username" placeholder="Username">
+    
+    <!-- Code example of a password field in form -->
+    <input type="password" name="password" placeholder="Password">
+    
 
+    <!-- Code example of a submit button in form -->
+    <input type="submit" value="Submit">
+  </form>
+</body>
 </html>
